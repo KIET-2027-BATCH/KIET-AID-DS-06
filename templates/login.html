@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://www.thehealthy.com/wp-content/uploads/2018/02/GettyImages-1155240409.jpg') no-repeat center center/cover;
+        }
+        .login-container {
+            width: 400px;
+            padding: 30px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            color: white;
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff6600;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .login-container button:hover {
+            background-color: #ff4500;
+        }
+    </style>
+      <div class="navbar">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+        </ul>
+    </div>
+</head>
+<body>
+  
+    <div class="login-container">
+        <h2>Login</h2>
+        <form>
+            <input type="email" placeholder="Enter your Gmail" required>
+            <input type="password" placeholder="Enter your Password" required>
+            <button type="submit">Login</button> 
+        </form>
+    </div>
+
+</body>
+</html>
