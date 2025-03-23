@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: rgba(0, 0, 0, 0.7) 
+                        url('https://www.pixelstalk.net/wp-content/uploads/2016/08/Food-Wallpapers-HD-For-Desktop.jpg') 
+                        center center fixed;
+            background-size: cover;
+            background-blend-mode: darken;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: #fff;
+        }
+
+        h2 {
+            color: orangered;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 2px solid orangered;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            margin: 50px auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .predict-btn {
+            width: 100px;
+            padding: 10px;
+            background-color: orangered;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .predict-btn:hover {
+            background-color: #ff5722;
+        }
+
+        .nav-box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-box a {
+            text-decoration: none;
+            color: #fff;
+            background-color: orangered;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .nav-box a:hover {
+            background-color: #ff5722;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-box">
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+    <h2>Welcome to Epic Eats!</h2>
+    <p style="text-align: center;">You have successfully logged in.</p>
+
+    <h3 style="text-align: center;">Search for Delivery Prediction</h3>
+    <form action="/predict" method="POST">
+        <label>Order ID:</label>
+        <input type="text" name="order_id" required>
+
+        <label>Distance (km):</label>
+        <input type="text" name="distance" required>
+
+        <label>Preparation Time (min):</label>
+        <input type="text" name="prep_time" required>
+
+        <label>Courier Experience (yrs):</label>
+        <input type="text" name="experience" required>
+
+        <label>Weather:</label>
+        <select name="weather" required>
+            <option value="Clear">Clear</option>
+            <option value="Rainy">Rainy</option>
+        </select>
+
+        <label>Traffic:</label>
+        <select name="traffic" required>
+            <option value="Low">Low</option>
+            <option value="High">High</option>
+        </select>
+
+        <label>Time of Day:</label>
+        <select name="time_of_day" required>
+            <option value="Morning">Morning</option>
+            <option value="Evening">Evening</option>
+        </select>
+
+        <label>Vehicle Type:</label>
+        <select name="vehicle_type" required>
+            <option value="Bike">Bike</option>
+            <option value="Car">Car</option>
+        </select>
+
+        <button type="submit" class="predict-btn">Predict</button>
+    </form>
+</body>
+</html>
